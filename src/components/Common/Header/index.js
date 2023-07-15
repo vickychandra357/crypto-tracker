@@ -20,7 +20,7 @@ function Header(){
                 </a>
                 <a href="#">
                 <Button text={"Dashboard"} 
-                outlined={true}
+                // outlined={true}
                 onClick={()=>console.log("Btn Clicked")}
                 />
                 </a>
