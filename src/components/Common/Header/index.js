@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import "./styles.css";
 import TemporaryDrawer from "./drawer";
 import Button from "../Botton";
@@ -9,21 +10,21 @@ function Header(){
         <div className="navbar">
             <h1 className="logo">CryptoTracker<span style={{color:"var(--blue)"}}>.</span></h1>
             <div className="links">
-                <a href="/">
+                <Link to="/">
                     <p className="link">Home</p>
-                </a>
-                <a href="/">
+                </Link>
+                <Link to="/Compare">
                 <p className="link">Compare</p>
-                </a>
-                <a href="/">
+                </Link>
+                <Link to="/Watchlist">
                 <p className="link">Watchlist</p>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="/Dashboard">
                 <Button text={"Dashboard"} 
                 // outlined={true}
                 onClick={()=>console.log("Btn Clicked")}
                 />
-                </a>
+                </Link>
             </div>
             <div className="mobile-drawer">
                 <TemporaryDrawer />
