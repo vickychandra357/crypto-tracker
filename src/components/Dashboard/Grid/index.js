@@ -37,11 +37,11 @@ function Grid({coin}){
         <div className="info-container">
             <h3 className="coin-price" style={{color:coin.price_change_percentage_24h < 0 
                 ?"var(--red)"
-                :"var(--green"}}
-                >₹{coin.current_price.toLocaleString()}
+                :"var(--green)"}}
+                >${coin.current_price.toLocaleString()}
                 </h3>
                 <p className="total_volume">Total volume : {coin.total_volume.toLocaleString()}</p>
-                <p className="total_volume">Market Cap : ₹{coin.market_cap.toLocaleString()}</p>
+                <p className="total_volume">Market Cap : ${coin.market_cap.toLocaleString()}</p>
         </div>
     </div>
 );

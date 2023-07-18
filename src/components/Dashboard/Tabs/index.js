@@ -7,6 +7,7 @@ import {Box,createTheme,ThemeProvider} from "@mui/material"
 import Grid from '../Grid';
 import "./styles.css"
 import { useState } from 'react';
+import List from '../List';
 
 export default function TabsComponent({coins}) {
   const [value, setValue] = useState('grid');
@@ -49,9 +50,12 @@ export default function TabsComponent({coins}) {
             )})}</div>
         </TabPanel>
         <TabPanel value="list">
-        <div>{coins.map((item,i)=>{
-                return (<p key={i}>{i+1}.{item.id}</p>
-            )})}</div>
+        <table className='list-tab'>
+          {coins.map((item,i)=>{
+                return (
+                <List coin={item} key={i}/>
+            )})}
+          </table>
         </TabPanel>
         
       </TabContext>
