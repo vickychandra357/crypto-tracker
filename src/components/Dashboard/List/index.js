@@ -4,10 +4,12 @@ import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
 import TrendingDownRoundedIcon from '@mui/icons-material/TrendingDownRounded';
 import Tooltip from '@mui/material/Tooltip';
 import { convertNumber } from "../../../functions/convertNumber";
+import { Link } from "react-router-dom";
 
 function List({ coin }) {
 
     return (
+        <Link to={`/coin/${coin.id}`}>
         <tr className="list-row">
             <Tooltip title="Coin Logo">
                 <td className="td-image">
@@ -77,6 +79,7 @@ function List({ coin }) {
             </Tooltip>
 
         </tr>
+        </Link>
     )
 }
 
