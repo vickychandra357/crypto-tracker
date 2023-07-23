@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab&family=Roboto:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
   --white: #fff;
@@ -8,46 +8,58 @@
   --darkgrey: #1b1b1b;
   --green: #61c96f;
   --red: #f94141;
+  --teal :rgb(15, 66, 66);
+  --sky: rgb(150, 216, 216);
+  --tomato : tomato;
+  --yellow : rgb(226, 226, 45);
 }
 
-html{
+[data-theme="light"] {
+  --white: #111;
+  --black: #fff;
+  --grey: #5f5e5e;
+  --darkgrey: #f3f3f3;
+  --teal: rgb(4, 41, 41);
+  --sky: rgb(38, 206, 206);
+  --tomato : rgb(236, 56, 24);
+  --yellow : rgb(226, 226, 45);
+}
+
+html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--black);
-  color: var(--white);
-  /* height: 200vh; */
-  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 
-::selection{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: var(--white);
+}
+
+::selection {
   background-color: var(--blue);
   color: var(--white);
 }
 
-/* width */
 ::-webkit-scrollbar {
-  width: 0.3rem;
+  width: 0.5rem;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: var(--black);
-}
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--blue);
-  border-radius: 3rem;
-}
-
-a{
-  color: var(--white) !important;
-  text-decoration: none !important;
+  border-radius: 1rem;
+  background-color: var(--blue);
 }
 
 img {
@@ -55,26 +67,16 @@ img {
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
-  
+}
+
+a {
+  text-decoration: none;
+  color: var(--white) !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .cursor-pointer,
+  .cursor {
+    display: none;
   }
-
-  .grey-wrapper{
-    display: block;
-    width: 90%;
-    background-color: var(--darkgrey);
-    margin: 1.5rem auto;
-    border-radius: 0.8rem;
-    padding: 1rem 1rem;
-  }
-
-
-  .coins-days-flex{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 1.5rem;
-    gap: 2rem;
-  }
-
-  
-
+}

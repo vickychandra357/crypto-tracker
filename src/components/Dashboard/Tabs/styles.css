@@ -1,5 +1,5 @@
 .grid-flex{
-    display: flex;
+    display:  flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -7,17 +7,15 @@
     margin: 1.5rem 2rem;
 }
 
-.list-tab{
+.list-table{
     width: 80%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-
 @media only screen and (max-width: 1200px){
-    .list-tab{
+    .list-table{
         width: 95%;
-        
     }
 }

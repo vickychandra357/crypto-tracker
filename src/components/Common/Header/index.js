@@ -1,36 +1,43 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import Button from "../Button";
+import MobileDrawer from "./drawer";
 import "./styles.css";
-import TemporaryDrawer from "./drawer";
-import Button from "../Botton";
+import { Link } from "react-router-dom";
+import DarkMode from "../DarkMode";
 
+function Header() {
+  
 
-function Header(){
-    return (
-        <div className="navbar">
-            <h1 className="logo">CryptoTracker<span style={{color:"var(--blue)"}}>.</span></h1>
-            <div className="links">
-                <Link to="/">
-                    <p className="link">Home</p>
-                </Link>
-                <Link to="/Compare">
-                <p className="link">Compare</p>
-                </Link>
-                {/* <Link to="/Watchlist">
-                <p className="link">Watchlist</p>
-                </Link> */}
-                <Link to="/Dashboard">
-                <Button text={"Dashboard"} 
-                // outlined={true}
-                onClick={()=>console.log("Btn Clicked")}
-                />
-                </Link>
-            </div>
-            <div className="mobile-drawer">
-                <TemporaryDrawer />
-            </div>
-        </div>
-    )
+  return (
+    <div className="header">
+      <Link to="/">
+        <h1>
+          CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
+        </h1>
+      </Link>
+      <div className="links-flex">
+        <DarkMode />
+        <Link to="/">
+          <p className="link">Home</p>
+        </Link>
+        <Link to="/compare">
+          <p className="link">Compare</p>
+        </Link>
+        <Link to="/watchlist">
+          <p className="link">Watchlist</p>
+        </Link>
+        <Link to="/Dashboard">
+          <Button outlined={true}
+            text="Dashboard"
+            onClick={() => {
+              console.log("btn-clicked!!!");
+            }}
+          />
+        </Link>
+      </div>
+      <MobileDrawer />
+    </div>
+  );
 }
 
 export default Header;
