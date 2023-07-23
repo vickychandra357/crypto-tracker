@@ -3,7 +3,6 @@ import Header from "../components/Common/Header";
 import TabsComponents from "../components/Dashboard/Tabs";
 import { useState } from "react";
 import { useEffect } from "react";
-import axios from "axios";
 import Search from "../components/Dashboard/Search";
 import Pagination from "../components/Dashboard/Pagination";
 import Loader from "../components/Common/Loader";

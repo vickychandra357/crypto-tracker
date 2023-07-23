@@ -16,9 +16,9 @@ function Header(){
                 <Link to="/Compare">
                 <p className="link">Compare</p>
                 </Link>
-                <Link to="/Watchlist">
+                {/* <Link to="/Watchlist">
                 <p className="link">Watchlist</p>
-                </Link>
+                </Link> */}
                 <Link to="/Dashboard">
                 <Button text={"Dashboard"} 
                 // outlined={true}

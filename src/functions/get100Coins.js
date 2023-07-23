@@ -11,5 +11,6 @@ export const  get100Coins=()=>{
     .catch((error)=>{
       console.log("Error>>>>",error);
     });
+    
     return myCoins;
 }

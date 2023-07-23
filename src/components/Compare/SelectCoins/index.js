@@ -4,36 +4,24 @@ import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import "./styles.css";
 
-function SelectCoins() {
-    const [crypto1,setCrypto1]=useState("bitcoin"); 
-    const [crypto2,setCrypto2]=useState("ethereum"); 
+function SelectCoins({crypto1,crypto2,handleCoinChange}) {
     const [allCoins,setAllCoins]=useState([])
     const styles={
         height: "2.5rem",
-        color:"var(--white)",
-        "& .MuiOutlinedInput-notchedOutline" :{
-            borderColor:"var(--white)",
-        },
-        "& .MuiSvgIcon-root":{
             color:"var(--white)",
-        },
-        "&:hover":{
-            "&& fieldset":{
-                borderColor:"#3a80e9",
+            "& .MuiOutlinedInput-notchedOutline" :{
+                borderColor:"var(--white)",
             },
-        },
-    };
-    const handleCoinChange=(event,isCoin2)=>{
-        if(isCoin2){
-            setCrypto2(event.target.value);
-            console.log("crypto2 id",event.target.value);
+            "& .MuiSvgIcon-root":{
+                color:"var(--white)",
+            },
+            "&:hover":{
+                "&& fieldset":{
+                    borderColor:"#3a80e9",
+                },
+            },
         }
-        else{
-            setCrypto1(event.target.value);
-            console.log("crypto1 id",event.target.value); 
-        }
-        
-    }
+    
     useEffect(()=>{
         getData()
     },[])
@@ -43,16 +31,18 @@ function SelectCoins() {
         setAllCoins(myCoins);
     }
   return (
-    <div className='coins-flex'>
-        <p>Crypto 1 </p>
+    <div className='compare-flexs'>
+        <p>Crypto 1</p>
         <Select
         sx={styles}
           value={crypto1}
           label="Crypto 1"
-          onChange={handleCoinChange}
+          onChange={(event)=>handleCoinChange(event,false)}
         >
-            {allCoins.map((coin)=>(
-                <MenuItem value={coin.id}>{coin.name}</MenuItem> 
+            {allCoins
+           .filter((item)=>item.id!==crypto2)
+            .map((coin ,i)=>(
+                <MenuItem key={i} value={coin.id}>{coin.name}</MenuItem> 
             ))}
         </Select>
         
@@ -63,11 +53,12 @@ function SelectCoins() {
           label="Crypto 2"
           onChange={(event)=>handleCoinChange(event,true)}
         >
-            {allCoins.map((coin)=>(
-                <MenuItem value={coin.id}>{coin.name}</MenuItem> 
+            {allCoins
+            .filter((item)=>item.id!==crypto1)
+            .map((coin,i)=>(
+                <MenuItem key={i} value={coin.id}>{coin.name}</MenuItem> 
             ))}
         </Select>
-        
     </div>
   )
 }

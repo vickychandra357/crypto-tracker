@@ -25,9 +25,9 @@ export default function TemporaryDrawer() {
                 <Link to="/Compare">
                 <p className="link">Compare</p>
                 </Link>
-                <Link to="/Watchlist">
+                {/* <Link to="/Watchlist">
                 <p className="link">Watchlist</p>
-                </Link>
+                </Link> */}
                 <Link to="/Dashboard">
                 <p className="link">Dashboard</p>
                 </Link>
