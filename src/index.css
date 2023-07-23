@@ -8,7 +8,7 @@
   --darkgrey: #1b1b1b;
   --green: #61c96f;
   --red: #f94141;
-  --teal :rgb(15, 66, 66);
+  --teal :rgb(24, 27, 221);
   --sky: rgb(150, 216, 216);
   --tomato : tomato;
   --yellow : rgb(226, 226, 45);
@@ -19,8 +19,8 @@
   --black: #fff;
   --grey: #5f5e5e;
   --darkgrey: #f3f3f3;
-  --teal: rgb(140, 235, 16);
-  --sky: rgb(38, 206, 206);
+  --teal: rgb(24, 27, 221);
+  --sky: rgb(150, 216, 216);
   --tomato : rgb(236, 56, 24);
   --yellow : rgb(226, 226, 45);
 }
