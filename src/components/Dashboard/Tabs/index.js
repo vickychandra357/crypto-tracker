@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React  from 'react';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList'
 import Tab from '@mui/material/Tab';
@@ -7,6 +7,7 @@ import { createTheme, ThemeProvider } from '@mui/material';
 import Grid from '../Grid';
 import './styles.css'
 import List from '../List';
+import { useState } from 'react';
 
 const theme = createTheme({
   palette: {
@@ -26,7 +27,7 @@ const style = {
 };
 
 export default function TabsComponent({ coins }) {
-  const [value, setValue] = React.useState("grid");
+  const [value, setValue] = useState("grid");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

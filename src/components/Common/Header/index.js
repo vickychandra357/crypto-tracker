@@ -15,7 +15,7 @@ function Header() {
           CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
         </h1>
       </Link>
-      <div className="links-flex">
+      <div className="links-flex" >
         <DarkMode />
         <Link to="/">
           <p className="link">Home</p>

@@ -41,7 +41,10 @@ function WatchlistPage() {
               </h1>
               <div style={{ display: "flex", justifyContent: "center" }}>
                 <a href="/dashboard">
-                  <Button text={"Dashboard"} />
+                  <Button text={"Dashboard"} 
+                  onClick={() => {
+                    console.log("btn-clicked!!!");
+                  }}/>
                 </a>
               </div>
             </div>

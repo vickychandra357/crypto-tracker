@@ -24,7 +24,8 @@ function DashboardPage() {
     setSearch(e.target.value);
   }
 
-  var filterCoin = coins.filter((item) => item.name.toLowerCase().includes(search.toLowerCase()) || item.symbol.toLowerCase().includes(search.toLowerCase()));
+  var filterCoin = coins.filter((item) => item.name.toLowerCase().includes(search.toLowerCase()) || 
+  item.symbol.toLowerCase().includes(search.toLowerCase()));
 
   useEffect(() => {
     getData();
